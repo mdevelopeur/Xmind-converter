@@ -49,3 +49,9 @@ def convert_xmind_to_xlsx(xmind_file_path, output_xlsx_path):
     print(f"✅ Success! Converted '{xmind_file_path}' into '{output_xlsx_path}'")
 
 # --- Example Usage ---
+if __name__ == "__main__":
+    # Substitute with your actual file names
+    input_file = "file.xmind"
+    output_file = "file.xlsx"
+    
+    convert_xmind_to_xlsx(input_file
