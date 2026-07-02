@@ -99,7 +99,7 @@ def xlsx_to_xmind(xlsx_path, xmind_path):
 
 # --- Пример использования ---
 if __name__ == "__main__":
-    input_excel = "file.xlsx"    # Ваша таблица Excel
+    input_excel = "to_xmind.xlsx"    # Ваша таблица Excel
     output_xmind = "from_excel.xmind" # Итоговая карта XMind
     
     xlsx_to_xmind(input_excel, output_xmind)
