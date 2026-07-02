@@ -54,4 +54,4 @@ if __name__ == "__main__":
     input_file = "file.xmind"
     output_file = "file.xlsx"
     
-    convert_xmind_to_xlsx(input_file
+    convert_xmind_to_xlsx(input_file, output_file)
