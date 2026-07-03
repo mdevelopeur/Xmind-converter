@@ -42,3 +42,12 @@ def xlsx_to_markdown(file_path, sheet_name=None):
             md_lines.append(separator)
             
     return "\n".join(md_lines)
+
+xlsx_file = "sample.xlsx"  # Change to your actual file
+markdown_output = xlsx_to_markdown(xlsx_file)
+
+# Print the result or save to a file
+#print(markdown_output)
+
+with open("output.md", "w", encoding="utf-8") as f:
+    f.write(markdown_output)
