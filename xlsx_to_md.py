@@ -36,7 +36,8 @@ def xlsx_to_markdown(file_path, sheet_name=None):
             
         # Join cells with standard Markdown pipe notation
         md_row = "".join(row_cells) + ""
-        md_lines.append(md_row)
+        if md_row.replace(" ", ""):
+            md_lines.append(md_row)
         previous_row = row
         # Automatically generate the Markdown header separator after the first row
         if row_idx == 1:
