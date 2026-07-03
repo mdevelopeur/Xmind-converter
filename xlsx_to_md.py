@@ -19,7 +19,7 @@ def xlsx_to_markdown(file_path, sheet_name=None):
             if val is None:
                 cell_text = ""
             elif val == previous_row[index].value:
-                if first_node:
+                #if first_node:
                 cell_text = "    "
             else:
                 # Convert to string and handle interior newlines for Markdown compatibility
