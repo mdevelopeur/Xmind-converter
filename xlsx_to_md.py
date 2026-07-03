@@ -5,8 +5,8 @@ def xlsx_to_markdown(file_path, sheet_name=None):
     wb = openpyxl.load_workbook(file_path, data_only=True)
     ws = wb[sheet_name] if sheet_name else wb.active
     class Object:
-    def __init__(self, value):
-        self.value = value
+        def __init__(self, value):
+            self.value = value
     md_lines = []
 
     previous_row = [Object(False)]*100
