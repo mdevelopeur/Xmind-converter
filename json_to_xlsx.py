@@ -29,7 +29,7 @@ for file_path in json_files:
             print(f"Skipping invalid JSON file: {file_path}")
 
 for item in all_data:
-    data_list.append(item["address"].split(", ") + ["Церкви", item["name"]])
+    data_list.append(["Схема событий", "Россия", "Центральный"] + item["address"].split(", ")[:3] + ["Церкви", item["name"]])
 # 4. Convert the combined data into a Pandas DataFrame
 df = pd.DataFrame(data_list)
 
