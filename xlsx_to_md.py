@@ -28,8 +28,8 @@ def xlsx_to_markdown(file_path, sheet_name=None):
                 cell_text = str(val).replace("\n", "<br>")
                 # Escape the markdown pipe character to keep table structure intact
                 cell_text = cell_text.replace("|", "\\|")
-                row_cells.append("- " + cell_text)
-                md_row = "".join(row_cells) + ""
+                #row_cells.append("- " + cell_text)
+                md_row = "".join(row_cells) + "- " + cell_text
                 md_lines.append(md_row)
                 cell_text = "    "
             row_cells.append(cell_text)
