@@ -7,7 +7,7 @@ def xlsx_to_markdown(file_path, sheet_name=None):
     
     md_lines = []
 
-    previous_row = []
+    previous_row = [False]*100
     # Iterate through each row in the worksheet
     for row_idx, row in enumerate(ws.iter_rows(values_only=False), start=1):
         row_cells = []
