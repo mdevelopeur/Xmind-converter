@@ -23,7 +23,7 @@ def xlsx_to_markdown(file_path, sheet_name=None):
             elif val == previous_row[index].value:
                 #if first_node:
                 cell_text = "    "
-            else:
+            elif index < len(row) - 1:
                 # Convert to string and handle interior newlines for Markdown compatibility
                 cell_text = str(val).replace("\n", "<br>")
                 # Escape the markdown pipe character to keep table structure intact
@@ -41,7 +41,7 @@ def xlsx_to_markdown(file_path, sheet_name=None):
         # Automatically generate the Markdown header separator after the first row
         if row_idx == 1:
             separator = "| " + " | ".join(["---"] * len(row_cells)) + " |"
-            md_lines.append(separator)
+            #md_lines.append(separator)
             
     return "\n".join(md_lines)
 
