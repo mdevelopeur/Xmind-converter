@@ -12,7 +12,7 @@ json_files = glob.glob(os.path.join(json_folder, "*.json"))
 
 # 3. Read and combine all JSON data into a single list
 all_data = []
-
+data_list = []
 for file_path in json_files:
     with open(file_path, "r", encoding="utf-8") as file:
         try:
@@ -29,9 +29,9 @@ for file_path in json_files:
             print(f"Skipping invalid JSON file: {file_path}")
 
 for item in all_data:
-    item = item["address"].split(", ") + ["Церкви", item["name"]] 
+    data_list.append(item["address"].split(", ") + ["Церкви", item["name"]])
 # 4. Convert the combined data into a Pandas DataFrame
-df = pd.DataFrame(all_data)
+df = pd.DataFrame(data_list)
 
 # 5. Export the DataFrame to an Excel spreadsheet
 df.to_excel(output_excel, index=False)
