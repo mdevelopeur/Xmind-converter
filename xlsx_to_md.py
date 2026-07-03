@@ -4,10 +4,12 @@ def xlsx_to_markdown(file_path, sheet_name=None):
     # Load the workbook and select sheet
     wb = openpyxl.load_workbook(file_path, data_only=True)
     ws = wb[sheet_name] if sheet_name else wb.active
-    
+    class Object:
+    def __init__(self, value):
+        self.value = value
     md_lines = []
 
-    previous_row = [False]*100
+    previous_row = [Object(False)]*100
     # Iterate through each row in the worksheet
     for row_idx, row in enumerate(ws.iter_rows(values_only=False), start=1):
         row_cells = []
@@ -35,7 +37,7 @@ def xlsx_to_markdown(file_path, sheet_name=None):
         # Join cells with standard Markdown pipe notation
         md_row = "".join(row_cells) + ""
         md_lines.append(md_row)
-        
+        previous_row = row
         # Automatically generate the Markdown header separator after the first row
         if row_idx == 1:
             separator = "| " + " | ".join(["---"] * len(row_cells)) + " |"
