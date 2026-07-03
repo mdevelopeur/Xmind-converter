@@ -46,7 +46,7 @@ def xlsx_to_markdown(file_path, sheet_name=None):
             
     return "\n".join(md_lines)
 
-xlsx_file = "sample.xlsx"  # Change to your actual file
+xlsx_file = "_sample.xlsx"  # Change to your actual file
 markdown_output = xlsx_to_markdown(xlsx_file)
 
 # Print the result or save to a file
