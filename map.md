@@ -3,4 +3,6 @@
     - Task A
     - Task B
 - Phase 2: Execution
-    - Task C
+    + Task C
+        - Task CA
+        - Task CB
