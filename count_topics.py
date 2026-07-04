@@ -35,7 +35,7 @@ def get_total_subjects(file_path):
 
 # --- Execution ---
 if __name__ == "__main__":
-    xmind_file = "file.xmind"  # Replace with your actual file path
+    xmind_file = "file_.xmind"  # Replace with your actual file path
     
     try:
         total_subjects = get_total_subjects(xmind_file)
